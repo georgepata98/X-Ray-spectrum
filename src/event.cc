@@ -58,11 +58,11 @@ void MyEventAction::EndOfEventAction(const G4Event *event)
     {
         fRunAction->AddEdep(energy);  //functia dependenta de variabila de tip G4double "energy" numita "AddEdep()"
 
-        *fOutputFile << "Event no." << event->GetEventID() << " -> Deposited energy of X-rays: " << energy*keV << " [keV]" << G4endl;
+        *fOutputFile << "Event no." << event->GetEventID() << " -> Deposited energy of X-rays: " << energy / keV << " [keV]" << G4endl;
 
-        analysisManager->FillH1(0, energy*keV);  //ID-ul histogramei, valoarea
+        analysisManager->FillH1(0, energy);  //ID-ul histogramei, valoarea
         
-        analysisManager->FillNtupleDColumn(0, energy*keV);
+        analysisManager->FillNtupleDColumn(0, energy);
         analysisManager->AddNtupleRow();
     }
 }
