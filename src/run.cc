@@ -56,7 +56,7 @@ void MyRunAction::EndOfRunAction(const G4Run* run)
 
     if(fOutputFile.is_open()) fOutputFile.close();
 
-    G4cout << G4endl << "*************** End of Run " << runID << " ***************" << G4endl << "Number of events: " << nOfEvents << G4endl << "Total energy deposited by X-rays: " << (totalEnergy.GetValue())*keV << " [keV]" << G4endl << "********************************************" << G4endl << G4endl;
+    G4cout << G4endl << "*************** End of Run " << runID << " ***************" << G4endl << "Number of events: " << nOfEvents << G4endl << "Total energy deposited by X-rays: " << (totalEnergy.GetValue()) / keV << " [keV]" << G4endl << "********************************************" << G4endl << G4endl;
 
 
 
