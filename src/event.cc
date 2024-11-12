@@ -60,9 +60,9 @@ void MyEventAction::EndOfEventAction(const G4Event *event)
 
         *fOutputFile << "Event no." << event->GetEventID() << " -> Deposited energy of X-rays: " << energy / keV << " [keV]" << G4endl;
 
-        analysisManager->FillH1(0, energy);  //ID-ul histogramei, valoarea
+        analysisManager->FillH1(0, energy / keV);  //ID-ul histogramei, valoarea
         
-        analysisManager->FillNtupleDColumn(0, energy);
+        analysisManager->FillNtupleDColumn(0, energy / keV);
         analysisManager->AddNtupleRow();
     }
 }
