@@ -14,7 +14,7 @@ MyRunAction::MyRunAction()
     auto analysisManager = G4AnalysisManager::Instance();
     analysisManager->SetNtupleMerging(true);
 
-    analysisManager->CreateH1("Eabs", "Edep in logicUnion", 150, 0.001*keV, 150*keV);  //nbins, e_min, e_max
+    analysisManager->CreateH1("Eabs", "Edep in logicUnion", 150, 0, 150);  //nbins, e_min, e_max
     
     analysisManager->CreateNtuple("Edep", "Edep in logicUnion");
     analysisManager->CreateNtupleDColumn("Eabs");
