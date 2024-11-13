@@ -58,7 +58,8 @@ void MyEventAction::EndOfEventAction(const G4Event *event)
     {
         fRunAction->AddEdep(energy);  //functia dependenta de variabila de tip G4double "energy" numita "AddEdep()"
 
-        *fOutputFile << "Event no." << event->GetEventID() << " -> Deposited energy of X-rays: " << energy / keV << " [keV]" << G4endl;
+        //*fOutputFile << "Event no." << event->GetEventID() << " -> Deposited energy of X-rays: " << energy / keV << " [keV]" << G4endl;
+        *fOutputFile << energy / keV << G4endl;  //umplerea fisierului .txt pentru a putea fi analizat intr-un alt program de analiza de date
 
         analysisManager->FillH1(0, energy / keV);  //ID-ul histogramei, valoarea
         
