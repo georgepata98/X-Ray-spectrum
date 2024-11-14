@@ -9,7 +9,7 @@
 
     cout << "---------- Program care face spectrul razelor X ----------" << endl << endl;
 
-    cout << "Introduceti numele fisierului .txt cu valorile energiilor depozitate de razele X:" << endl;
+    cout << "Numele fisierului .txt cu valorile energiilor depozitate de razele X:" << endl;
     cin >> fileName;
 
     file.open(fileName + ".txt", ios::in);
