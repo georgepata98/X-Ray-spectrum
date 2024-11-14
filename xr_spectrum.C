@@ -5,7 +5,7 @@
     fstream file;
     string fileName;
     float energy;
-    int x=0;
+    unsigned int x=0;
 
 
     cout << "---------- Program care face spectrul razelor X ----------" << endl << endl;
