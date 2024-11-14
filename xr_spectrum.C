@@ -4,8 +4,7 @@
 
     fstream file;
     string fileName;
-    float energy;
-    unsigned int x=0;
+    float counts;
 
 
     cout << "---------- Program care face spectrul razelor X ----------" << endl << endl;
@@ -17,15 +16,14 @@
 
     if(!file)
     {
-        cout << "EROARE: Nu a fost gasit fisierul " << fileName << " !" << endl;
+        cout << "EROARE: Nu a fost gasit fisierul " << fileName << ".txt !" << endl;
         return 1;
     }
 
     while(!file.eof())
     {
-        file >> energy;
-        h1->Fill(x, energy);
-        x++;
+        file >> counts;
+        h1->Fill(counts);
     }
 
     file.close();
